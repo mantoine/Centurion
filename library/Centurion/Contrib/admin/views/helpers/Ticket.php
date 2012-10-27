@@ -24,10 +24,15 @@
  * @subpackage  Helper
  * @copyright   Copyright (c) 2008-2011 Octave & Octave (http://www.octaveoctave.com)
  * @license     http://centurion-project.org/license/new-bsd     New BSD License
- * @author      Laurent Chenay <lchenay@gmail.com>
+ * @author      Laurent Chenay <lc@centurion-project.org>
  */
 class Admin_View_Helper_Ticket extends Zend_View_Helper_Abstract
 {
+    /**
+     * @param null $actionUrl
+     * @param null $mktime
+     * @return $this
+     */
     public function ticket($actionUrl = null, $mktime = null)
     {
         return $this;
@@ -44,6 +49,8 @@ class Admin_View_Helper_Ticket extends Zend_View_Helper_Abstract
                 unset($actionUrl['ticket']);
             $actionUrl = $this->view->url($actionUrl);
         }
+
+        $actionUrl = preg_replace ('/\?ticket=[a-zA-Z0-9]{32}/', '', $actionUrl);        
         
         return $actionUrl;
     }

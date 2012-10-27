@@ -22,11 +22,11 @@
  * @package     Centurion_Version
  * @copyright   Copyright (c) 2008-2011 Octave & Octave (http://www.octaveoctave.com)
  * @license     http://centurion-project.org/license/new-bsd     New BSD License
- * @author      Laurent Chenay <lchenay@gmail.com>
+ * @author      Laurent Chenay <lc@centurion-project.org>
  */
 final class Centurion_Version
 {
-    const VERSION = '0.2';
+    const VERSION = '0.3';
 
     /**
      * The latest stable version Zend Framework available
